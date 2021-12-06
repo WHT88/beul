@@ -1,0 +1,274 @@
+/**
+* Cette partie sera dedier a nos variables qui vont contenir
+* nos couleurs utiliser
+* police etc ...
+**/
+:root {
+  --primary: #f39c12;
+  --second: #16a085;
+  --footer-color: #2c3e50;
+  --text-color: #333;
+  --bg-color: rgba(241, 241, 241, 0.3);
+  --bg-comment: #f2efef;
+  --pub-time-color: rgba(51, 51, 51, 0.5);
+  --font-link: "Roboto", sans-serif;
+  --font-logo: "Merriweather", serif;
+  --font-text: "Montserrat", sans-serif;
+  --line-color: rgba(51, 51, 51, 0.3);
+  --face-color: #3742fa; }
+
+/**
+Le fichier reset nous permet d'initialiser ou personnaliser 
+nos balises et la racine de nos pages 
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  font-size: 62.5%; }
+
+html body {
+  color: var(--text-color);
+  font-family: var(--font-text);
+  background: var(--bg-color);
+  font-size: 1.6rem; }
+
+a {
+  text-decoration: none;
+  font-family: var(--font-link);
+  color: var(--text-color); }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+p {
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+/*
+    Le code css du header ou l'entete de nos pages du blog
+*/
+.navbar {
+  background: var(--primary); }
+
+.navbar .container-fluid {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+/*=============== le text du logo ==============*/
+.logo {
+  margin-bottom: -1rem; }
+
+.logo a span {
+  font-size: 3rem;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  display: inline-block; }
+
+.logo a {
+  transition: color 0.3s ease-in-out;
+  vertical-align: middle; }
+
+.logo a img {
+  margin-right: -2rem;
+  margin-top: -2.3rem;
+  transition: all 0.5s ease-in; }
+
+.logo a:hover {
+  color: #000; }
+
+/*=============== le cote personnel ou concepteur ==============*/
+.personal {
+  margin-bottom: -1rem; }
+
+.personal a {
+  padding: 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out; }
+  @media (max-width: 760px) {
+    .personal a {
+      padding: 0 0.5rem; } }
+
+.personal a:hover {
+  opacity: 1;
+  color: var(--second); }
+
+/*=============== les reseaux sociaux de l'equipe ==============*/
+.social {
+  margin-bottom: -1rem; }
+
+.social a {
+  padding: 0 1rem; }
+
+.social a img:hover {
+  width: 25px;
+  height: 22;
+  filter: brightness(0) invert(2); }
+
+/*========= le boutton d'inscription ========*/
+.social button {
+  margin: 0 2rem;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  margin-top: -0.8rem; }
+
+/*=============== le slide banner du header ==============*/
+.baner_slide {
+  margin: 0.3rem 0; }
+
+.carousel-item {
+  max-height: 300px; }
+
+/*=== Pour que les images du slide aient la meme taille (hauteur) ====*/
+.cadre-img {
+  object-fit: cover; }
+
+/*===== le texte sur le slide banner ====*/
+.carousel-caption {
+  margin-bottom: 7rem;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.2em; }
+  @media (max-width: 760px) {
+    .carousel-caption {
+      font-size: 1.8rem;
+      margin-bottom: 2rem; } }
+
+.carousel-caption h4 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  font-weight: 700; }
+  @media (max-width: 760px) {
+    .carousel-caption h4 {
+      font-size: 2.5rem; } }
+
+/*=============== la barre navigation principal du header ==============*/
+.main-nav-bg {
+  background: var(--second); }
+
+.main-nav-bg .container-fluid {
+  padding: 0; }
+
+.main-nav-bg .container-fluid div .navbrand {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-weight: 600; }
+
+.main-nav-bg .container-fluid div .navbrand img {
+  margin-top: -0.5rem; }
+
+.main-nav-bg .container-fluid div.main-onglet {
+  padding: 1rem;
+  padding-right: 2rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem; }
+
+.main-nav-bg .container-fluid div.active,
+.main-nav-bg .container-fluid div.main-onglet:hover {
+  transition: all 0.4s ease-in-out; }
+
+.main-nav-bg .container-fluid div.active,
+.main-nav-bg .container-fluid div.main-onglet:hover {
+  background: var(--primary); }
+
+/*=============== menu icon ==============*/
+.navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 10px 6px; }
+
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 3px;
+  background: #eee; }
+
+.navbar-toggler span + span,
+.navbar-toggler span + span + span {
+  margin-top: 4px; }
+
+/*===============  menu content ==============*/
+/* ===== menu header =====*/
+.offcanvas-header {
+  background: var(--primary);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.offcanvas-header h5 a {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: var(--font-logo);
+  transition: color 0.3s ease-in-out; }
+
+.offcanvas-header h5 a:hover {
+  color: #000; }
+
+.offcanvas-header h5 a img {
+  margin-right: -2rem; }
+
+/* menu social */
+.offcanvas-social {
+  background: var(--primary);
+  padding: 1rem 1rem; }
+
+.offcanvas-social a {
+  margin: 0 1rem; }
+
+.offcanvas-social a img:hover {
+  width: 25px;
+  height: 22;
+  filter: brightness(0) invert(2); }
+
+.offcanvas-social button {
+  margin-left: 5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  border-radius: 10px; }
+
+/* ===== menu body =====*/
+.offcanvas-body {
+  background: var(--bg-color); }
+
+.offcanvas-body ul {
+  margin-left: -0.8rem;
+  margin-right: -2rem; }
+
+.offcanvas-body ul .nav-item {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 1rem 0 1rem 2rem;
+  transition: all 0.4s ease-in-out; }
+
+.offcanvas-body ul .active {
+  background: var(--second); }
+
+.offcanvas-body ul .nav-item:hover {
+  background: var(--second); }
+
+.offcanvas-body ul .nav-item a img {
+  margin-top: -0.8rem;
+  margin-right: 1rem; }
+
+/*========= la responsive du header =========*/
